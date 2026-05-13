@@ -1,0 +1,50 @@
+[project]
+name = "dnsexf"
+version = "0.1.0"
+description = "A modular research framework for semantically-valid DNS exfiltration experiments."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [
+    { name = "Cooper Morgan" },
+    { name = "Logan Day" },
+    { name = "Filip Jagodzinski" },
+    { name = "Hsiang-Jen Hong" },
+]
+keywords = [
+    "dns",
+    "exfiltration",
+    "research-framework",
+    "network-intrusion-detection",
+    "adversarial-ml",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Cwooper/dns-exf-framework"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dnsexf"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
